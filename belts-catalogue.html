@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belts Catalogue | Romeo's Kicks</title>
+  <meta name="description" content="Full belts catalogue — stud, designer, western, gothic styles at ₦20,000. Order on WhatsApp from Romeo's Kicks.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0a0c">
+  <meta property="og:title" content="Belts Catalogue | Romeo's Kicks">
+  <meta property="og:description" content="Full belts catalogue — stud, designer, western, gothic styles at ₦20,000. Order on WhatsApp from Romeo's Kicks.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/jpeg" href="logo.jfif">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('romeoTheme');
+        if (t !== 'light' && t !== 'dark') t = 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600;700&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="preconnect" href="https://i.pinimg.com" crossorigin>
+  <link rel="dns-prefetch" href="https://i.pinimg.com">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .cat-page {
+      padding: calc(var(--header-h) + 2rem) 1.5rem 5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      min-height: 100vh;
+    }
+    .cat-hero { text-align: center; margin-bottom: 2.25rem; }
+    .cat-hero .section-title { margin-bottom: 0.5rem; }
+    .cat-meta {
+      font-size: 0.85rem;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-top: 0.75rem;
+    }
+    .cat-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.75rem;
+    }
+    .cat-search {
+      flex: 1;
+      min-width: 200px;
+      max-width: 340px;
+      position: relative;
+    }
+    .cat-search input {
+      width: 100%;
+      padding: 0.7rem 1rem 0.7rem 2.4rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .cat-search input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
+    }
+    .cat-search i {
+      position: absolute;
+      left: 0.95rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    .cat-count { font-size: 0.8rem; color: var(--text-muted); }
+    .cat-back { margin-bottom: 1.25rem; }
+    .cat-back a {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .cat-back a:hover { color: var(--gold); }
+    .cat-hero.reveal-on-load {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: catHeroIn 0.8s 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes catHeroIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .cat-toolbar.reveal-on-load {
+      opacity: 0;
+      transform: translateY(16px);
+      animation: catHeroIn 0.7s 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .cat-empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem;
+      color: var(--text-muted);
+    }
+  
+    .cat-more-notice {
+      margin: 3rem auto 1rem;
+      max-width: 560px;
+      text-align: center;
+    }
+    .cat-more-inner {
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 16px;
+      padding: 1.75rem 1.5rem;
+      box-shadow: var(--shadow-gold);
+    }
+    .cat-more-inner > i.fab {
+      font-size: 1.75rem;
+      color: #25D366;
+      margin-bottom: 0.5rem;
+    }
+    .cat-more-inner p {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      margin-bottom: 0.35rem;
+      color: var(--text-primary);
+    }
+    .cat-more-inner span {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.1rem;
+    }
+    .cat-more-inner .btn {
+      margin: 0 auto;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- INTRO OVERLAY -->
+  <div id="intro-overlay" class="intro-overlay">
+    <div class="intro-content">
+      <div class="intro-logo-wrap">
+        <img src="logo.jfif" alt="Romeo's Kicks" class="intro-logo">
+      </div>
+      <h1 class="intro-title">
+        <span class="intro-line">ROMEO'S</span>
+        <span class="intro-line accent">KICKS</span>
+      </h1>
+      <div class="intro-bar"></div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link" aria-label="Romeo's Kicks Home">
+        <img src="logo.jfif" alt="Romeo's Kicks Logo" class="logo-img">
+        <span class="logo-text">ROMEO'S <em>kicks</em></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#shoes" class="nav-link">Shoes</a>
+        <a href="index.html#belts" class="nav-link">Belts</a>
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+            Catalogues <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="shoes-catalogue.html" class="nav-dropdown-item" role="menuitem">
+              <span class="cat-icon cat-icon-shoe" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14c1.5-1 4-2 7-2h5c2 0 4 .5 5 2l1 1.5H3.5L3 14z"/><path d="M4 15.5h16"/><path d="M7 12c.5-2 1.5-4 3-5"/><path d="M12 9.5c1-.5 2-1 3.5-1"/></svg>
+              </span>
+              Full Shoes Catalogue
+            </a>
+            <a href="belts-catalogue.html" class="nav-dropdown-item" role="menuitem">
+              <span class="cat-icon cat-icon-belt" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="8" height="8" rx="1.5"/><path d="M16 12h5"/><path d="M3 12h5"/><path d="M10.5 10.5h3v3h-3z"/></svg>
+              </span>
+              Full Belts Catalogue
+            </a>
+          </div>
+        </div>
+        <a href="belts-catalogue.html" class="nav-link active">Catalogue</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="theme-icon"></i>
+        </button>
+        <button class="cart-btn" id="cart-btn" aria-label="Open cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="cart-close" id="cart-close" aria-label="Close cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total">₦0</span>
+      </div>
+      <button class="btn btn-whatsapp" id="whatsapp-order-btn">
+        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+      </button>
+      <button class="btn btn-ghost clear-cart-btn" id="clear-cart">Clear Cart</button>
+    </div>
+  </aside>
+
+  <main class="cat-page">
+    <div class="cat-back">
+      <a href="index.html#belts"><i class="fas fa-arrow-left"></i> Back to Belts</a>
+    </div>
+
+    <div class="section-header cat-hero reveal-on-load">
+      <p class="section-eyebrow">Full Collection</p>
+      <h1 class="section-title">Belts <span class="gold">Catalogue</span></h1>
+      <p class="section-desc">Every style at one price. Add to cart, then order on WhatsApp.</p>
+      <p class="cat-meta">60 styles shown · All belts — ₦20,000</p>
+    </div>
+
+    <div class="cat-toolbar reveal-on-load">
+      <div class="cat-search">
+        <i class="fas fa-search"></i>
+        <input type="search" id="cat-search" placeholder="Search style or code…" autocomplete="off">
+      </div>
+      <div class="filter-bar" id="cat-filters">
+        <button class="filter-btn active" data-tag="all">All</button>
+        <button class="filter-btn" data-tag="stud">Stud</button>
+        <button class="filter-btn" data-tag="designer">Designer</button>
+        <button class="filter-btn" data-tag="western">Western</button>
+        <button class="filter-btn" data-tag="gothic">Gothic</button>
+        <button class="filter-btn" data-tag="luxury">Luxury</button>
+        <button class="filter-btn" data-tag="street">Street</button>
+      </div>
+      <span class="cat-count" id="cat-showing"></span>
+    </div>
+
+    
+    <div class="products-grid" id="cat-grid"></div>
+
+    <div class="cat-more-notice" id="cat-more-notice">
+      <div class="cat-more-inner">
+        <i class="fab fa-whatsapp"></i>
+        <p>Want to see more styles?</p>
+        <span>Contact us on WhatsApp to browse the rest of our belt collection.</span>
+        <a href="https://wa.me/2348095723573?text=Hi-%20I%20would%20like%20to%20see%20more%20belt%20styles%20from%20Romeo%20Kicks" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
+          <i class="fab fa-whatsapp"></i> Message Romeo's Kicks
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Romeo's Kicks. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a href="#" id="floating-wa" class="floating-wa" aria-label="Order on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="floating-wa-pulse"></span>
+  </a>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="product-modal">
+      <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+    const WA = '2348095723573';
+    function rkSoftImg(root) {
+      (root || document).querySelectorAll('.product-img').forEach((img, i) => {
+        img.referrerPolicy = 'no-referrer';
+        img.addEventListener('error', function onErr() {
+          if (img.dataset.rkN) {
+            img.removeEventListener('error', onErr);
+            return; // leave broken icon rather than wrong logo spam — optional logo:
+            // img.src = 'logo.jfif';
+          }
+          img.dataset.rkN = '1';
+          const u = (img.getAttribute('src') || '').split('?')[0];
+          const alt = u.endsWith('.jpg') ? u.replace(/\.jpg$/i, '.jpeg') : u.replace(/\.jpeg$/i, '.jpg');
+          img.referrerPolicy = 'no-referrer';
+          img.src = alt;
+        }, { once: false });
+      });
+    }
+
+    const CATALOG = [{"code": "B001", "name": "FF Dual Buckle Box Set", "desc": "Black leather strap with interchangeable silver and gold FF-style buckles, shown with yellow gift packaging.", "price": 20000, "image": "https://i.pinimg.com/736x/3e/0b/55/3e0b55da8ebe0b298e6d53b2b4e6cf76.jpg", "tag": "designer"}, {"code": "B002", "name": "Cross Plate Stud Pair", "desc": "Black and white studded leather belts with oversized silver cross plate buckles and full stud rows.", "price": 20000, "image": "https://i.pinimg.com/1200x/94/0d/26/940d26d1d76d0ecc6e7e66c94572cba5.jpg", "tag": "gothic"}, {"code": "B003", "name": "Swallow Rhinestone Western", "desc": "Cognac tooled leather with swallow and scroll motifs outlined in rhinestones and a classic oval buckle.", "price": 20000, "image": "https://i.pinimg.com/1200x/99/e4/aa/99e4aae59aa05923d5af9b9b4dfea17e.jpg", "tag": "western"}, {"code": "B004", "name": "Kelly Lock Thin Belt Set", "desc": "Slim textured leather belts in cream, orange, red, burgundy and taupe with polished lock-clasp hardware.", "price": 20000, "image": "https://i.pinimg.com/736x/a9/d0/cb/a9d0cbd504a0f4d1356db1d8708b83cd.jpg", "tag": "luxury"}, {"code": "B005", "name": "Pyramid Stud Black Belt", "desc": "Black leather fully stacked with silver pyramid studs and a rectangular chrome buckle.", "price": 20000, "image": "https://i.pinimg.com/1200x/59/15/f1/5915f15a641b5e9df5a22a53e27e5bb2.jpg", "tag": "stud"}, {"code": "B006", "name": "Camo Pyramid Stud Belt", "desc": "Green camouflage strap with multi-row silver pyramid studs, grommets and a classic frame buckle.", "price": 20000, "image": "https://i.pinimg.com/1200x/33/4f/d0/334fd0c45b8648b1247b8820aadffd75.jpg", "tag": "street"}, {"code": "B007", "name": "Iron Cross Flame Stud Belt", "desc": "Black pyramid-studded strap with a large silver iron-cross buckle detailed with flame etching.", "price": 20000, "image": "https://i.pinimg.com/736x/52/c7/b9/52c7b9bd1328cb9caf07eb4084c7423f.jpg", "tag": "gothic"}, {"code": "B008", "name": "Levi's Classic Brown Belt", "desc": "Smooth brown leather with an antique silver Levi's logo buckle — clean everyday designer finish.", "price": 20000, "image": "https://i.pinimg.com/736x/97/24/22/972422c5f913d92a2e9f0c84728718e9.jpg", "tag": "designer"}, {"code": "B009", "name": "Floral Embroidered Suede Belt", "desc": "Black suede with red and cream floral embroidery along the edges and an antique brass buckle.", "price": 20000, "image": "https://i.pinimg.com/1200x/57/2e/f8/572ef88330bdd33df037f456b6a3f754.jpg", "tag": "luxury"}, {"code": "B010", "name": "Windows XP Icon Belt", "desc": "Blue tech-print strap with Windows logo buckle, desktop icons and 10/22/2009 timestamp detail.", "price": 20000, "image": "https://i.pinimg.com/1200x/e9/74/1d/e9741d64000f3351b8210fc6de123dc5.jpg", "tag": "street"}, {"code": "B011", "name": "Crystal Star Rhinestone Belt", "desc": "Black belt fully paved in black and clear crystals with star motifs and a crystal-covered frame buckle.", "price": 20000, "image": "https://i.pinimg.com/1200x/4a/b5/ce/4ab5ce95f346eaa80f1b59d43fde7d2a.jpg", "tag": "stud"}, {"code": "B012", "name": "Skull Flame Print Belt", "desc": "White strap printed with skulls, red crosses, iron crosses and flame graphics with a silver frame buckle.", "price": 20000, "image": "https://i.pinimg.com/1200x/80/2b/ed/802bedfc6c5010f21ed88060a8212517.jpg", "tag": "gothic"}, {"code": "B013", "name": "Star Stud Black & White Pair", "desc": "Black and white leather belts with silver star studs, grommets and rectangular chrome buckles.", "price": 20000, "image": "https://i.pinimg.com/1200x/25/57/b7/2557b763f706068f64fe69dc9b756496.jpg", "tag": "stud"}, {"code": "B014", "name": "Rhinestone Western Quartet", "desc": "Four western belts fully paved in clear and colored rhinestones with matching crystal cowgirl buckles.", "price": 20000, "image": "https://i.pinimg.com/736x/08/1b/ef/081befff55dc2f82767e28f18ba76788.jpg", "tag": "western"}, {"code": "B015", "name": "Leopard Rhinestone Stud Belt", "desc": "Brown leopard-print leather with rows of silver studs and clear rhinestones plus a silver frame buckle.", "price": 20000, "image": "https://i.pinimg.com/1200x/d4/f0/6f/d4f06f9617ff98242587e6e9998ac4b4.jpg", "tag": "street"}, {"code": "B016", "name": "Running Horse Western Belt", "desc": "Tooled cognac leather with floral carving and a large silver oval buckle featuring a running horse.", "price": 20000, "image": "https://i.pinimg.com/736x/0e/57/64/0e5764ba9a37b830d47b1c723375d3b1.jpg", "tag": "western"}, {"code": "B017", "name": "Fleur Cross Stud Duo", "desc": "Black leather with silver studs and fleur-de-lis details, paired with ornate oval cross-style buckles.", "price": 20000, "image": "https://i.pinimg.com/1200x/6f/44/2f/6f442f87e647f535a8b64f459d7b8159.jpg", "tag": "luxury"}, {"code": "B018", "name": "Iron Cross Stud Trio", "desc": "White, leopard and black studded straps finished with oversized silver iron-cross statement buckles.", "price": 20000, "image": "https://i.pinimg.com/736x/c7/d4/2f/c7d42f6cf2ee349442fdb640721bc0f3.jpg", "tag": "gothic"}, {"code": "B019", "name": "Diesel H Logo Belt", "desc": "Black leather with a polished silver oval H-style logo buckle — sharp minimal designer look.", "price": 20000, "image": "https://i.pinimg.com/1200x/ba/b0/83/bab08364e7b9decb9f86d243993dba58.jpg", "tag": "designer"}, {"code": "B020", "name": "Internet Explorer Blue Belt", "desc": "Blue tech-print strap with oversized IE logo buckle, desktop icons and 3:39 AM timestamp print.", "price": 20000, "image": "https://i.pinimg.com/1200x/88/90/87/8890873579d3e6da03e2a88155df6055.jpg", "tag": "street"}, {"code": "B021", "name": "Color Star Appliqué Belt", "desc": "Black pebbled leather with multicolor star appliqués and a dual-prong chrome buckle.", "price": 20000, "image": "https://i.pinimg.com/736x/48/40/b3/4840b378dac8b2b503dcbac73c8016fd.jpg", "tag": "stud"}, {"code": "B022", "name": "Tooled & Beaded Western Pair", "desc": "Cognac tooled floral belt with engraved silver buckle plus a colorful beaded southwestern strap.", "price": 20000, "image": "https://i.pinimg.com/1200x/83/6f/ee/836fee288e464660468cd088875be718.jpg", "tag": "western"}, {"code": "B023", "name": "LV Initial Black Belt", "desc": "Black grained leather with a matte black LV-style initial buckle and orange presentation box.", "price": 20000, "image": "https://i.pinimg.com/1200x/56/41/38/564138c45141016f44eba30718ccf2fd.jpg", "tag": "designer"}, {"code": "B024", "name": "Tire Tread Black Belt", "desc": "Black strap molded with tire-tread texture and a weathered silver frame buckle — pure street texture.", "price": 20000, "image": "https://i.pinimg.com/736x/82/9c/09/829c09db73ad965483c7b98119e5c830.jpg", "tag": "street"}, {"code": "B025", "name": "Gun Clip & Bottle Cap Set", "desc": "Brown and black belts with pistol-ammo, pink script and Corona bottle-cap buckles.", "price": 20000, "image": "https://i.pinimg.com/736x/5f/8e/07/5f8e07a0a339c40b9c8fa03888dc69b9.jpg", "tag": "street"}, {"code": "B026", "name": "Aztec Gold & Pistol Set", "desc": "Brown belts with rectangular Aztec plate, oval crest and pistol-ammo buckles.", "price": 20000, "image": "https://i.pinimg.com/1200x/22/9e/d2/229ed289e88b17c24679c98df17731ba.jpg", "tag": "western"}, {"code": "B027", "name": "Rebel Flag & Fire Dept Set", "desc": "Black and brown belts with rebel flag buckles and red fire-department badge buckle.", "price": 20000, "image": "https://i.pinimg.com/1200x/c9/b4/9d/c9b49db2d8bca47f1f7988ad99feafdf.jpg", "tag": "street"}, {"code": "B028", "name": "Turquoise Concho Trio", "desc": "Black and brown belts with large turquoise stone concho-style statement buckles.", "price": 20000, "image": "https://i.pinimg.com/736x/d6/69/e4/d669e40d101e2ad145bba2f760f50d7a.jpg", "tag": "western"}, {"code": "B029", "name": "Wings Heart Irish Set", "desc": "Black and brown belts with angel wings, pink heart and Irish clover winged buckles.", "price": 20000, "image": "https://i.pinimg.com/1200x/fd/6a/50/fd6a503b4c667b4989b8132d0f0fbce7.jpg", "tag": "street"}, {"code": "B030", "name": "Harley Eagle Hammer Set", "desc": "Brown and black belts with Harley-style eagle, blue eagle and Thor-hammer buckles.", "price": 20000, "image": "https://i.pinimg.com/736x/22/7d/c3/227dc316d62fa4d617cbdbf1fb7c22f8.jpg", "tag": "street"}, {"code": "B031", "name": "Four Cross Print Belts", "desc": "White, red, black-red and black-white all-over cross print belts with silver frames.", "price": 20000, "image": "https://i.pinimg.com/736x/03/7c/b2/037cb2896d3caa923322a72a70e59971.jpg", "tag": "gothic"}, {"code": "B032", "name": "Golden Eagle Head Trio", "desc": "Black and brown belts with sculpted golden eagle-head statement buckles.", "price": 20000, "image": "https://i.pinimg.com/736x/74/26/63/7426632828c1d013226c47406f48fac2.jpg", "tag": "luxury"}, {"code": "B033", "name": "Football Buckle Set", "desc": "Brown and black belts with gold and silver American football buckles plus hammered plate.", "price": 20000, "image": "https://i.pinimg.com/1200x/08/6e/be/086ebeee35f8c8f5d86c943d2cac654c.jpg", "tag": "street"}, {"code": "B034", "name": "PIMP Guitar Head Set", "desc": "Black and brown belts with space-theme, PIMP oval and blue guitar-head buckles.", "price": 20000, "image": "https://i.pinimg.com/1200x/6e/a5/16/6ea5165926a54f7d41712ccc01294c7e.jpg", "tag": "street"}, {"code": "B035", "name": "Clear Slipknot Pair", "desc": "Transparent belts with red-blue HYSTERIC print and red Slipknot logo buckles.", "price": 20000, "image": "https://i.pinimg.com/1200x/ff/f5/91/fff591b1a8b99c65458772a8578e5f2a.jpg", "tag": "street"}, {"code": "B036", "name": "Skull Gang Star Rack", "desc": "Black belts with multi-skull, alien, iron-cross and gold star hardware.", "price": 20000, "image": "https://i.pinimg.com/1200x/3e/1a/5e/3e1a5e3476e56971aa9c39c10c98e6b4.jpg", "tag": "gothic"}, {"code": "B037", "name": "Revolution Skull Lineup", "desc": "Black, white and red skull-print belts with ornate cross, gold mask and skull buckles.", "price": 20000, "image": "https://i.pinimg.com/736x/6d/76/51/6d76510cbcf107895d1bffc718c125a7.jpg", "tag": "gothic"}, {"code": "B038", "name": "Clear Supreme Belt", "desc": "Transparent PVC belt with red and blue SUPREME lettering and silver frame buckle.", "price": 20000, "image": "https://i.pinimg.com/736x/f2/15/3e/f2153e15cd583f7aaf1bdac770f16fab.jpg", "tag": "street"}, {"code": "B039", "name": "Dragon Croc Concho Set", "desc": "Red and burgundy croc-texture dragon buckles plus fleur and large-concho stud belts.", "price": 20000, "image": "https://i.pinimg.com/1200x/c6/48/9f/c6489f41b373611c6f67eccd279479b8.jpg", "tag": "luxury"}, {"code": "B040", "name": "Rainbow Cross Appliqué", "desc": "White and black straps with multi-color cross appliqués and ornate silver buckles.", "price": 20000, "image": "https://i.pinimg.com/736x/08/f9/8b/08f98ba0966f74d9fe7d92d770e9f1df.jpg", "tag": "gothic"}, {"code": "B041", "name": "Studded Assortment Mix", "desc": "Mixed studded and decorative belts in varied finishes — statement street edit.", "price": 20000, "image": "https://i.pinimg.com/1200x/ae/91/f6/ae91f60080708d98b70432d66e563117.jpg", "tag": "stud"}, {"code": "B042", "name": "Revolution Red Skull Set", "desc": "Red and black Revolution print belts with cross, skull and multi-skull buckles.", "price": 20000, "image": "https://i.pinimg.com/736x/ac/b9/d6/acb9d6edb6881fca31b30f4c09e7aed6.jpg", "tag": "gothic"}, {"code": "B043", "name": "BB Circle Logo Trio", "desc": "Black leather belts with black, silver and gold circular BB logo buckles.", "price": 20000, "image": "https://i.pinimg.com/736x/cb/f5/f5/cbf5f5ad4f029e6802ffe1658ac5931b.jpg", "tag": "designer"}, {"code": "B044", "name": "Flame Money UK Lineup", "desc": "Skull, flame, dollar-print, wing-skull and Union Jack belts with crystal and enamel buckles.", "price": 20000, "image": "https://i.pinimg.com/1200x/22/9e/d2/229ed289e88b17c24679c98df17731ba.jpg", "tag": "street"}, {"code": "B045", "name": "Concho & Diamond Stud Set", "desc": "White and black belts with large oval conchos, iron-cross and diamond-panel designs.", "price": 20000, "image": "https://i.pinimg.com/736x/dc/69/6b/dc696ba8f04a673fc96ea1150a3c497b.jpg", "tag": "western"}, {"code": "B046", "name": "Croc Texture Cross Pair", "desc": "Black and white croc-texture belts with ornate iron-cross buckles and tip plates.", "price": 20000, "image": "https://i.pinimg.com/736x/12/55/2d/12552da4b42dc66937ed431755a27401.jpg", "tag": "gothic"}, {"code": "B047", "name": "ZOB Heart Dagger Set", "desc": "Black and white studded belts with ZOB logo, red heart-dagger and diamond-panel buckles.", "price": 20000, "image": "https://i.pinimg.com/736x/f4/00/92/f4009240b383496b5b6f352a4c68df32.jpg", "tag": "street"}, {"code": "B048", "name": "Letter Monogram Buckles", "desc": "Black and brown belts with large letter monogram buckles in silver, crystal and gold.", "price": 20000, "image": "https://i.pinimg.com/736x/db/26/f2/db26f2839bd4e740b8d7275b645f5885.jpg", "tag": "designer"}, {"code": "B049", "name": "Glitter Diamond Western", "desc": "Black, red-stripe, tan and glitter western belts with cross and gem details.", "price": 20000, "image": "https://i.pinimg.com/1200x/12/07/d2/1207d275913d0b69a36fe587e1037492.jpg", "tag": "western"}, {"code": "B050", "name": "Mixed Hardware Edit", "desc": "Assorted statement buckles and straps — varied street and western hardware.", "price": 20000, "image": "https://i.pinimg.com/736x/33/b9/3c/33b93c3bddab906fc06d27edfad85819.jpg", "tag": "street"}, {"code": "B051", "name": "Blue Skull Cross Studs", "desc": "Black double-row studded belt with blue enamel skull-and-cross buckle held in hand.", "price": 20000, "image": "https://i.pinimg.com/1200x/10/85/73/108573be457e4325a7e55e0d1826ab5c.jpg", "tag": "gothic"}, {"code": "B052", "name": "Race Car Charm Belt", "desc": "Black strap lined with colorful toy race-car charms around the waist.", "price": 20000, "image": "https://i.pinimg.com/1200x/63/8b/8f/638b8ff389569f2785032f61891acbfd.jpg", "tag": "street"}, {"code": "B053", "name": "Medusa Croc Logo Set", "desc": "Brown and black croc-texture belts with EA and Medusa head circular buckles.", "price": 20000, "image": "https://i.pinimg.com/736x/d1/a2/6f/d1a26f66a2e00082f3f79a00f74b447e.jpg", "tag": "luxury"}, {"code": "B054", "name": "Dagger Eagle Dragon Set", "desc": "Black, red and white belts with dagger studs, eagle, dragon and floral oval buckles.", "price": 20000, "image": "https://i.pinimg.com/736x/d0/aa/ac/d0aaac5300c2343e92a93dcc4bef3ddb.jpg", "tag": "gothic"}, {"code": "B055", "name": "Crystal Medusa Heads", "desc": "Black leather belts with black, silver, crystal and gold Medusa head buckles.", "price": 20000, "image": "https://i.pinimg.com/736x/2d/ee/13/2dee1318e0ee9bc93a70d272a58007e0.jpg", "tag": "luxury"}, {"code": "B056", "name": "Piano Keys Western Set", "desc": "Black and white belts with cross, piano-key print and heavy crystal western buckles.", "price": 20000, "image": "https://i.pinimg.com/736x/4e/ba/f6/4ebaf61e0b6162c39ff38279b05838c0.jpg", "tag": "western"}, {"code": "B057", "name": "Medusa Croc Collection", "desc": "Brown and black croc-texture belts with EA and Medusa circular logo buckles.", "price": 20000, "image": "https://i.pinimg.com/1200x/b7/40/2f/b7402fa6d049907566a3c22ba65e8b6e.jpg", "tag": "luxury"}, {"code": "B058", "name": "Geometric V Buckle Trio", "desc": "Brown and black belts with silver, gold and black geometric V-shaped buckles.", "price": 20000, "image": "https://i.pinimg.com/1200x/90/20/7e/90207ea6a050e388223a1df00b9eb2f8.jpg", "tag": "designer"}, {"code": "B059", "name": "Clear UK Cross Trio", "desc": "Clear HYSTERIC and Union Jack glitter belts with ornate and studded cross buckles.", "price": 20000, "image": "https://i.pinimg.com/736x/49/bc/91/49bc912151d24f2fc3a79ad1eeb4dcbc.jpg", "tag": "street"}, {"code": "B060", "name": "Batman Nylon Pair", "desc": "Black nylon straps with yellow Batman logo plastic buckles and AAEPNOW text print.", "price": 20000, "image": "https://i.pinimg.com/1200x/67/4f/e3/674fe32bc5f77b7d59d1031157d6b25c.jpg", "tag": "street"}];
+
+    // Map catalog items to product shape (id = code for cart)
+    const byId = {};
+    CATALOG.forEach(item => {
+      byId[item.code] = {
+        id: item.code,
+        name: item.name,
+        brand: "Romeo's",
+        price: item.price,
+        image: item.image,
+        desc: item.desc,
+        badge: item.code,
+        tag: item.tag
+      };
+    });
+
+    let cart = JSON.parse(localStorage.getItem('romeoCart') || '[]');
+    let theme = document.documentElement.getAttribute('data-theme') || 'dark';
+    let activeTag = 'all';
+    let query = '';
+
+    const $ = (s, c = document) => c.querySelector(s);
+    const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+
+    function formatPrice(n) {
+      return '₦' + Number(n).toLocaleString('en-NG');
+    }
+
+    function fullImageUrl(url) {
+      if (!url) return url;
+      let u = String(url);
+      if (u.includes('i.pinimg.com')) u = u.replace(/\/(?:\d+x|originals)\//, '/736x/');
+      return u;
+    }
+    function cardImg(url) {
+      if (!url) return url;
+      let u = String(url);
+      if (u.includes('i.pinimg.com')) u = u.replace(/\/(?:\d+x|originals)\//, '/474x/');
+      return u;
+    }
+    function buildWhatsAppOrderMessage() {
+      if (cart.length === 0) return 'Hi- I would like to order from Romeo Kicks';
+      const lines = cart.map((item, i) => {
+        const qty = Number(item.qty) || 1;
+        const unit = Number(item.price) || 0;
+        const lineTotal = unit * qty;
+        const img = fullImageUrl(item.image || '');
+        return (i + 1) + '. ' + item.name + '\n' +
+          '   Qty: ' + qty + ' × ' + formatPrice(unit) + ' = ' + formatPrice(lineTotal) + '\n' +
+          (img ? '   Photo: ' + img + '\n' : '');
+      });
+      const total = cart.reduce((s, item) => s + (Number(item.price) || 0) * (Number(item.qty) || 1), 0);
+      return 'Hi- I would like to order from Romeo Kicks:\n\n' + lines.join('\n') +
+        '\n────────────────\nTOTAL: ' + formatPrice(total) + '\n\nPlease confirm availability. Thank you!';
+    }
+    function openWhatsAppOrder() {
+      window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(buildWhatsAppOrderMessage()), '_blank', 'noopener');
+    }
+
+
+    function showToast(msg) {
+      const t = $('#toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2500);
+    }
+
+    function saveCart() {
+      localStorage.setItem('romeoCart', JSON.stringify(cart));
+      updateCartUI();
+    }
+
+    function addToCart(id) {
+      const product = byId[id];
+      if (!product) return;
+      const existing = cart.find(item => item.id === id);
+      if (existing) existing.qty += 1;
+      else cart.push({
+        id: product.id,
+        name: product.name,
+        brand: product.brand,
+        price: product.price,
+        image: product.image,
+        section: 'belts',
+        qty: 1
+      });
+      saveCart();
+      showToast(product.name + ' added to cart');
+      const cartBtn = $('#cart-btn');
+      if (cartBtn) {
+        cartBtn.style.transform = 'scale(1.15)';
+        setTimeout(() => cartBtn.style.transform = '', 200);
+      }
+    }
+
+    function removeFromCart(id) {
+      cart = cart.filter(item => item.id !== id);
+      saveCart();
+      showToast('Item removed');
+    }
+
+    function updateQty(id, delta) {
+      const item = cart.find(i => i.id === id);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) removeFromCart(id);
+      else saveCart();
+    }
+
+    function clearCart() {
+      cart = [];
+      saveCart();
+      showToast('Cart cleared');
+    }
+
+    function updateCartUI() {
+      const count = cart.reduce((s, i) => s + i.qty, 0);
+      const countEl = $('#cart-count');
+      if (countEl) {
+        countEl.textContent = count;
+        countEl.classList.toggle('show', count > 0);
+      }
+      const container = $('#cart-items');
+      if (!container) return;
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="cart-empty">
+            <i class="fas fa-shopping-bag"></i>
+            <p>Your cart is empty</p>
+            <p style="font-size:0.85rem;margin-top:0.5rem">Add some kicks or belts</p>
+          </div>`;
+      } else {
+        container.innerHTML = cart.map(item => `
+          <div class="cart-item" data-id="${item.id}">
+            <img class="cart-item-img" src="${typeof cardImg === 'function' ? cardImg(item.image) : item.image}" alt="${item.name}" onerror="this.onerror=null;this.src='logo.jfif'">
+            <div class="cart-item-info">
+              <div class="cart-item-name">${item.name}</div>
+              <div class="cart-item-meta">${item.brand || ''}</div>
+              <div class="cart-item-price">${formatPrice(item.price * item.qty)}</div>
+              <div class="cart-item-qty">
+                <button class="qty-btn" data-action="dec" data-id="${item.id}">−</button>
+                <span>${item.qty}</span>
+                <button class="qty-btn" data-action="inc" data-id="${item.id}">+</button>
+              </div>
+            </div>
+            <button class="cart-item-remove" data-action="remove" data-id="${item.id}" aria-label="Remove">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        `).join('');
+      }
+      const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+      const totalEl = $('#cart-total');
+      if (totalEl) totalEl.textContent = formatPrice(total);
+    }
+
+    function openCart() {
+      $('#cart-sidebar').classList.add('open');
+      $('#cart-overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeCart() {
+      $('#cart-sidebar').classList.remove('open');
+      $('#cart-overlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function openModal(id) {
+      const product = byId[id];
+      if (!product) return;
+      $('#modal-body').innerHTML = `
+        <img class="modal-img" src="${product.image}" alt="${product.name}" onerror="this.onerror=null;this.src='logo.jfif'">
+        <div class="modal-info">
+          <p class="modal-brand">${product.brand} · ${product.badge}</p>
+          <h3 class="modal-name">${product.name}</h3>
+          <p class="modal-desc">${product.desc}</p>
+          <div class="modal-price">${formatPrice(product.price)}</div>
+          <div class="modal-actions">
+            <button class="btn btn-primary" data-action="add" data-id="${product.id}">
+              <i class="fas fa-shopping-bag"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      `;
+      $('#modal-overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function filtered() {
+      return CATALOG.filter(item => {
+        const tagOk = activeTag === 'all' || item.tag === activeTag;
+        const q = query.trim().toLowerCase();
+        const qOk = !q ||
+          item.name.toLowerCase().includes(q) ||
+          item.code.toLowerCase().includes(q) ||
+          item.desc.toLowerCase().includes(q);
+        return tagOk && qOk;
+      });
+    }
+
+    let cardObserver = null;
+    function observeCards() {
+      if (cardObserver) cardObserver.disconnect();
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        $$('.cat-scroll-card').forEach(c => c.classList.add('is-shown', 'visible'));
+        return;
+      }
+      cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-shown', 'visible');
+            cardObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      $$('.cat-scroll-card').forEach(c => cardObserver.observe(c));
+      // Fallback: reveal any still-hidden cards after 1.2s
+      setTimeout(() => {
+        $$('.cat-scroll-card:not(.is-shown)').forEach(c => c.classList.add('is-shown', 'visible'));
+      }, 1200);
+    }
+
+    function render() {
+      const list = filtered();
+      $('#cat-showing').textContent = list.length + ' of ' + CATALOG.length;
+      const grid = $('#cat-grid');
+      if (!list.length) {
+        grid.innerHTML = '<div class="cat-empty"><p>No styles match your search.</p></div>';
+        return;
+      }
+      grid.innerHTML = list.map((item, i) => `
+        <article class="product-card cat-scroll-card" style="transition-delay: ${Math.min(i % 8, 7) * 0.05}s" data-tag="${item.tag}">
+          <div class="product-img-wrap">
+            <span class="product-badge">${item.code}</span>
+            <img class="product-img" src="${typeof cardImg === 'function' ? cardImg(item.image) : item.image}" alt="${item.name}" width="600" height="600" loading="${i < 8 ? 'eager' : 'lazy'}" fetchpriority="${i < 4 ? 'high' : 'auto'}" referrerpolicy="no-referrer" decoding="async">
+            <button class="btn btn-primary btn-sm product-quick" data-action="quick" data-id="${item.code}">
+              Quick View
+            </button>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Romeo's · ${item.tag}</p>
+            <h3 class="product-name">${item.name}</h3>
+            <p class="product-desc">${item.desc}</p>
+            <div class="product-footer">
+              <div class="product-price">${formatPrice(item.price)}</div>
+              <button class="add-cart-btn" data-action="add" data-id="${item.code}" aria-label="Add to cart">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+      `).join('');
+      // Show cards in viewport immediately (avoid blank/invisible grid)
+      $$('.cat-scroll-card', grid).forEach((c, i) => {
+        if (i < 12) c.classList.add('is-shown', 'visible');
+      });
+      observeCards();
+      rkSoftImg(grid);
+
+    }
+
+    // Events
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-action]');
+      if (!btn) return;
+      const action = btn.dataset.action;
+      const id = btn.dataset.id;
+      if (action === 'add') {
+        addToCart(id);
+        if (btn.classList.contains('add-cart-btn')) {
+          btn.classList.add('added');
+          btn.innerHTML = '<i class="fas fa-check"></i>';
+          setTimeout(() => {
+            btn.classList.remove('added');
+            btn.innerHTML = '<i class="fas fa-plus"></i>';
+          }, 1200);
+        }
+      }
+      if (action === 'quick') openModal(id);
+      if (action === 'inc') updateQty(id, 1);
+      if (action === 'dec') updateQty(id, -1);
+      if (action === 'remove') removeFromCart(id);
+    });
+
+    $('#cat-search').addEventListener('input', () => {
+      query = $('#cat-search').value;
+      render();
+    });
+
+    $('#cat-filters').addEventListener('click', e => {
+      const b = e.target.closest('.filter-btn');
+      if (!b) return;
+      $$('#cat-filters .filter-btn').forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+      activeTag = b.dataset.tag;
+      render();
+    });
+
+    // Intro
+    (function () {
+      const overlay = $('#intro-overlay');
+      if (!overlay) return;
+      setTimeout(() => {
+        overlay.classList.add('hide');
+        setTimeout(() => overlay.remove(), 500);
+      }, 1500);
+    })();
+
+    // Theme
+    const icon = $('#theme-icon');
+    if (icon) icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    $('#theme-toggle').addEventListener('click', () => {
+      const next = theme === 'dark' ? 'light' : 'dark';
+      const apply = () => {
+        theme = next;
+        document.documentElement.setAttribute('data-theme', theme);
+        try { localStorage.setItem('romeoTheme', theme); } catch (e) {}
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      };
+      if (document.startViewTransition) document.startViewTransition(apply);
+      else apply();
+    });
+
+    // Cart open/close
+    $('#cart-btn').addEventListener('click', openCart);
+    $('#cart-close').addEventListener('click', closeCart);
+    $('#cart-overlay').addEventListener('click', closeCart);
+    $('#clear-cart').addEventListener('click', clearCart);
+    $('#whatsapp-order-btn').addEventListener('click', () => { openWhatsAppOrder(); });
+
+    // Modal
+    $('#modal-close').addEventListener('click', () => {
+      $('#modal-overlay').classList.remove('open');
+      document.body.style.overflow = '';
+    });
+    $('#modal-overlay').addEventListener('click', (e) => {
+      if (e.target === $('#modal-overlay')) {
+        $('#modal-overlay').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Mobile menu
+    const menuToggle = $('#menu-toggle');
+    const nav = $('#nav');
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        nav.classList.toggle('open');
+      });
+    }
+
+    // Header scroll
+    window.addEventListener('scroll', () => {
+      $('#header').classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // Floating WA
+    $('#floating-wa').addEventListener('click', e => { e.preventDefault(); openWhatsAppOrder(); });
+
+
+    // Categories dropdown
+    (function () {
+      const dropdown = document.querySelector('.nav-dropdown');
+      const dropToggle = document.querySelector('.nav-dropdown-toggle');
+      const menuToggle = document.getElementById('menu-toggle');
+      const nav = document.getElementById('nav');
+      if (!dropdown || !dropToggle) return;
+      dropToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const open = dropdown.classList.toggle('open');
+        dropToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove('open');
+          dropToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+      dropdown.querySelectorAll('.nav-dropdown-item').forEach(item => {
+        item.addEventListener('click', () => {
+          dropdown.classList.remove('open');
+          dropToggle.setAttribute('aria-expanded', 'false');
+          if (menuToggle) menuToggle.classList.remove('active');
+          if (nav) nav.classList.remove('open');
+        });
+      });
+    })();
+
+    updateCartUI();
+    render();
+  </script>
+</body>
+</html>

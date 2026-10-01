@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoes Catalogue | Romeo's Kicks</title>
+  <meta name="description" content="Browse 60 sneakers, loafers, boots and slides at Romeo's Kicks. Sneakers from ₦70,000. Order on WhatsApp.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0a0c">
+  <meta property="og:title" content="Shoes Catalogue | Romeo's Kicks">
+  <meta property="og:description" content="Browse 60 sneakers, loafers, boots and slides at Romeo's Kicks. Sneakers from ₦70,000. Order on WhatsApp.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/jpeg" href="logo.jfif">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('romeoTheme');
+        if (t !== 'light' && t !== 'dark') t = 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://i.ibb.co" crossorigin>
+  <link rel="dns-prefetch" href="https://i.ibb.co">
+  <link rel="preconnect" href="https://i.imgur.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600;700&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="preconnect" href="https://i.pinimg.com" crossorigin>
+  <link rel="dns-prefetch" href="https://i.pinimg.com">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .cat-page {
+      padding: calc(var(--header-h) + 2rem) 1.5rem 5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      min-height: 100vh;
+    }
+    .cat-hero { text-align: center; margin-bottom: 2.25rem; }
+    .cat-hero .section-title { margin-bottom: 0.5rem; }
+    .cat-meta {
+      font-size: 0.85rem;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-top: 0.75rem;
+    }
+    .cat-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.75rem;
+    }
+    .cat-search {
+      flex: 1;
+      min-width: 200px;
+      max-width: 340px;
+      position: relative;
+    }
+    .cat-search input {
+      width: 100%;
+      padding: 0.7rem 1rem 0.7rem 2.4rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .cat-search input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
+    }
+    .cat-search i {
+      position: absolute;
+      left: 0.95rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    .cat-count { font-size: 0.8rem; color: var(--text-muted); }
+    .cat-back { margin-bottom: 1.25rem; }
+    .cat-back a {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .cat-back a:hover { color: var(--gold); }
+    .cat-empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem;
+      color: var(--text-muted);
+    }
+    .cat-hero.reveal-on-load {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: catHeroIn 0.8s 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes catHeroIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .cat-toolbar.reveal-on-load {
+      opacity: 0;
+      transform: translateY(16px);
+      animation: catHeroIn 0.7s 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .cat-more-notice {
+      margin: 3rem auto 1rem;
+      max-width: 560px;
+      text-align: center;
+    }
+    .cat-more-inner {
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 16px;
+      padding: 1.75rem 1.5rem;
+      box-shadow: var(--shadow-gold);
+    }
+    .cat-more-inner > i.fab {
+      font-size: 1.75rem;
+      color: #25D366;
+      margin-bottom: 0.5rem;
+    }
+    .cat-more-inner p {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      margin-bottom: 0.35rem;
+      color: var(--text-primary);
+    }
+    .cat-more-inner span {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.1rem;
+    }
+    .cat-more-inner .btn {
+      margin: 0 auto;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="intro-overlay" class="intro-overlay">
+    <div class="intro-content">
+      <div class="intro-logo-wrap">
+        <img src="logo.jfif" alt="Romeo's Kicks" class="intro-logo">
+      </div>
+      <h1 class="intro-title">
+        <span class="intro-line">ROMEO'S</span>
+        <span class="intro-line accent">KICKS</span>
+      </h1>
+      <div class="intro-bar"></div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link" aria-label="Romeo's Kicks Home">
+        <img src="logo.jfif" alt="Romeo's Kicks Logo" class="logo-img">
+        <span class="logo-text">ROMEO'S <em>kicks</em></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#shoes" class="nav-link">Shoes</a>
+        <a href="index.html#belts" class="nav-link">Belts</a>
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+            Catalogues <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="shoes-catalogue.html" class="nav-dropdown-item" role="menuitem">
+              <span class="cat-icon cat-icon-shoe" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14c1.5-1 4-2 7-2h5c2 0 4 .5 5 2l1 1.5H3.5L3 14z"/><path d="M4 15.5h16"/><path d="M7 12c.5-2 1.5-4 3-5"/><path d="M12 9.5c1-.5 2-1 3.5-1"/></svg>
+              </span>
+              Full Shoes Catalogue
+            </a>
+            <a href="belts-catalogue.html" class="nav-dropdown-item" role="menuitem">
+              <span class="cat-icon cat-icon-belt" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="8" height="8" rx="1.5"/><path d="M16 12h5"/><path d="M3 12h5"/><path d="M10.5 10.5h3v3h-3z"/></svg>
+              </span>
+              Full Belts Catalogue
+            </a>
+          </div>
+        </div>
+        <a href="shoes-catalogue.html" class="nav-link active">Catalogue</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="theme-icon"></i>
+        </button>
+        <button class="cart-btn" id="cart-btn" aria-label="Open cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="cart-close" id="cart-close" aria-label="Close cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total">₦0</span>
+      </div>
+      <button class="btn btn-whatsapp" id="whatsapp-order-btn">
+        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+      </button>
+      <button class="btn btn-ghost clear-cart-btn" id="clear-cart">Clear Cart</button>
+    </div>
+  </aside>
+
+  <main class="cat-page">
+    <div class="cat-back">
+      <a href="index.html#shoes"><i class="fas fa-arrow-left"></i> Back to Shoes</a>
+    </div>
+
+    <div class="section-header cat-hero reveal-on-load">
+      <p class="section-eyebrow">Full Collection</p>
+      <h1 class="section-title">Shoes <span class="gold">Catalogue</span></h1>
+      <p class="section-desc">Sneakers, cooperate loafers, boots and slides — priced right, ready to order on WhatsApp.</p>
+      <p class="cat-meta">60 styles shown · Sneakers ₦70k · Loafers/Boots ₦50k · Slides from ₦20k</p>
+    </div>
+
+    <div class="cat-toolbar reveal-on-load">
+      <div class="cat-search">
+        <i class="fas fa-search"></i>
+        <input type="search" id="cat-search" placeholder="Search style or code…" autocomplete="off">
+      </div>
+      <div class="filter-bar" id="cat-filters">
+        <button class="filter-btn active" data-tag="all">All</button>
+        <button class="filter-btn" data-tag="sneakers">Sneakers</button>
+        <button class="filter-btn" data-tag="loafers">Cooperate/Loafers</button>
+        <button class="filter-btn" data-tag="boots">Boots</button>
+        <button class="filter-btn" data-tag="slides">Slides/Slippers</button>
+      </div>
+      <span class="cat-count" id="cat-showing"></span>
+    </div>
+
+    <div class="products-grid" id="cat-grid"></div>
+
+    <div class="cat-more-notice" id="cat-more-notice">
+      <div class="cat-more-inner">
+        <i class="fab fa-whatsapp"></i>
+        <p>Want to see more styles?</p>
+        <span>Contact us on WhatsApp to browse the rest of our shoe collection.</span>
+        <a href="https://wa.me/2348095723573?text=Hi-%20I%20would%20like%20to%20see%20more%20shoe%20styles%20from%20Romeo%20Kicks" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
+          <i class="fab fa-whatsapp"></i> Message Romeo's Kicks
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Romeo's Kicks. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a href="#" id="floating-wa" class="floating-wa" aria-label="Order on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="floating-wa-pulse"></span>
+  </a>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="product-modal">
+      <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+    const WA = '2348095723573';
+    const CATALOG = [{"code": "S001", "name": "Jordan 1 High Court Classic", "desc": "Premium high-top leather sneaker with contrast side panel, perforated toe and cushioned collar — street staple.", "price": 70000, "image": "https://i.pinimg.com/736x/20/42/67/204267e6bb9aeed3bb06adcb2d6caeaa.jpg", "tag": "sneakers"}, {"code": "S002", "name": "Nike Dunk Low Retro", "desc": "Low-profile leather Dunk with clean paneling, gum or white sole options and everyday street energy.", "price": 70000, "image": "https://i.pinimg.com/1200x/2f/72/6c/2f726c231a4567d0314304cf8e1b2e6f.jpg", "tag": "sneakers"}, {"code": "S003", "name": "Adidas Samba OG", "desc": "White leather Samba with black three-stripes, suede overlays and gold SAMBA text — indoor classic, street-ready.", "price": 70000, "image": "https://i.pinimg.com/736x/69/82/e9/6982e942a473b6cdb69a3eaf57f31009.jpg", "tag": "sneakers"}, {"code": "S004", "name": "Air Force 1 Triple White", "desc": "All-white leather AF1 with perforated toe and durable cupsole — the clean everyday essential.", "price": 70000, "image": "https://i.pinimg.com/736x/fc/40/a5/fc40a556515306c12dda4f3f90ce5ca5.jpg", "tag": "sneakers"}, {"code": "S005", "name": "Jordan 4 Retro Fire", "desc": "White leather Jordan 4 with red accents, mesh panels, support wings and visible Air unit.", "price": 70000, "image": "https://i.pinimg.com/736x/ab/ea/af/abeaafe71ec33f26343b1ab9da958768.jpg", "tag": "sneakers"}, {"code": "S006", "name": "Chunky Runner Mesh", "desc": "Layered mesh-and-suede runner with thick sole unit and reflective hits — built for flex and comfort.", "price": 70000, "image": "https://i.pinimg.com/1200x/b1/6c/79/b16c79a74bc1e75ece53cf01cf9ce920.jpg", "tag": "sneakers"}, {"code": "S007", "name": "Suede Court Low", "desc": "Retro low-top in soft suede with clean side stripe and optional gum sole — campus energy.", "price": 70000, "image": "https://i.pinimg.com/736x/f8/a8/88/f8a8887e94a171c12ce8fdc5a6bc4518.jpg", "tag": "sneakers"}, {"code": "S008", "name": "Nike Color-Block Court Shoe", "desc": "Mid-cut leather court shoe with bold color blocking and padded collar for all-day wear.", "price": 70000, "image": "https://i.pinimg.com/1200x/c3/5b/fb/c35bfb120be7c4e932c2002e56729c4e.jpg", "tag": "sneakers"}, {"code": "S009", "name": "ZX Runner White Black", "desc": "White mesh-and-leather runner with black stripes, sculpted midsole and soft cushioning.", "price": 70000, "image": "https://i.pinimg.com/1200x/d9/c1/5e/d9c15e1e0c8998e54aeb2533525e7ecb.jpg", "tag": "sneakers"}, {"code": "S010", "name": "Puma Court Classic", "desc": "Crisp white court sneaker with perforated side panel and smooth leather finish.", "price": 70000, "image": "https://i.pinimg.com/1200x/1e/18/55/1e185518cf7731e1d418d36852948191.jpg", "tag": "sneakers"}, {"code": "S011", "name": "Nike High-Top Basketball OG", "desc": "Classic high-top basketball silhouette in premium leather with contrast branding.", "price": 70000, "image": "https://i.pinimg.com/1200x/5d/ec/0b/5dec0b9f10309ce95bc29f348a5c8a94.jpg", "tag": "sneakers"}, {"code": "S012", "name": "Nike Low Dunk Gorge Green", "desc": "Low Dunk in gorge green, sail and burgundy with gum sole — clean paneling.", "price": 70000, "image": "https://i.pinimg.com/1200x/9a/81/9f/9a819f07718edcb4ae8784d25835b288.jpg", "tag": "sneakers"}, {"code": "S013", "name": "Retro Runner Shoe", "desc": "Layered shoe runner with chunky sole and multi-texture upper.", "price": 70000, "image": "https://i.pinimg.com/1200x/1c/a7/44/1ca7449caac8c45e2f8554167559c08c.jpg", "tag": "sneakers"}, {"code": "S014", "name": "Adidas Samba Spezial Suede", "desc": "Suede Spezial-style low with gum sole and tonal branding.", "price": 70000, "image": "https://i.pinimg.com/736x/55/97/9a/55979aacb4e79ebbb6c7dcd64bd4090f.jpg", "tag": "sneakers"}, {"code": "S015", "name": "Nike AF1 Orange Black Block", "desc": "Bold AF1 color-block in orange, black and white with perforated toe.", "price": 70000, "image": "https://i.pinimg.com/1200x/16/5e/76/165e76ee5ee8dbcd7ea7aebe5cbe8f3e.jpg", "tag": "sneakers"}, {"code": "S016", "name": "Jordan Jumpman Low", "desc": "Clean low Jordan silhouette with Jumpman branding and soft foam midsole.", "price": 70000, "image": "https://i.pinimg.com/1200x/85/60/6f/85606f0465574222906d79ae39bc655a.jpg", "tag": "sneakers"}, {"code": "S017", "name": "Adidas Gazelle-Style Suede", "desc": "Classic three-stripe suede low with serif side text and gum sole.", "price": 70000, "image": "https://i.pinimg.com/736x/d4/67/be/d467bec68733ce0f7091dce4d85d650d.jpg", "tag": "sneakers"}, {"code": "S018", "name": "Mesh Knit Runner", "desc": "Lightweight knit upper runner with responsive foam midsole.", "price": 70000, "image": "https://i.pinimg.com/736x/e9/94/ce/e994ced58b6b421f7f427c17af9dce4d.jpg", "tag": "sneakers"}, {"code": "S019", "name": "Leather Court Ace", "desc": "Minimal leather court shoe with thin sole and clean lines.", "price": 70000, "image": "https://i.pinimg.com/1200x/44/7d/7c/447d7c30b5906f135a571419bb026f8c.jpg", "tag": "sneakers"}, {"code": "S020", "name": "Premium High Leather Shoe", "desc": "Full-grain high-top with metal eyelets and padded tongue.", "price": 70000, "image": "https://i.pinimg.com/1200x/ee/84/80/ee8480d0ebbb0cd82eb624dbc736bc46.jpg", "tag": "sneakers"}, {"code": "S021", "name": "Penny Bar Leather Loafer", "desc": "Polished black leather penny loafer with hand-stitched moc toe and stacked heel — office and evening ready.", "price": 50000, "image": "https://i.pinimg.com/736x/69/1e/7e/691e7ee0d5472d4d57eda9953f2f375a.jpg", "tag": "loafers"}, {"code": "S022", "name": "Tassel Corporate Loafer", "desc": "Full-grain leather loafer with dual tassels and subtle bit detail — boardroom soft.", "price": 50000, "image": "https://i.pinimg.com/736x/b9/86/03/b986032216ca9d6370cc9ac84ecce8cb.jpg", "tag": "loafers"}, {"code": "S023", "name": "Color-Block Buckle Loafer", "desc": "Two-tone leather loafer with side buckle strap and contrast sole — cooperate with edge.", "price": 50000, "image": "https://i.pinimg.com/736x/86/51/4e/86514ecd63e990a5cfcb4f4e45f9c7c0.jpg", "tag": "loafers"}, {"code": "S024", "name": "Suede Driving Loafer", "desc": "Soft suede driving moccasin with rubber pebble sole — casual luxury.", "price": 50000, "image": "https://i.pinimg.com/1200x/d9/01/0f/d9010fe3f624572e7d97a1f96bb4569d.jpg", "tag": "loafers"}, {"code": "S025", "name": "Bit Strap Formal Loafer", "desc": "Black leather loafer with metal bit hardware across the vamp.", "price": 50000, "image": "https://i.pinimg.com/1200x/9f/77/76/9f777694105fc63baa701d10dcdbf997.jpg", "tag": "loafers"}, {"code": "S026", "name": "Brown Cap-Toe Loafer", "desc": "Cognac leather cap-toe loafer with clean welt and leather sole option.", "price": 50000, "image": "https://i.pinimg.com/1200x/1b/9d/b7/1b9db7fea151d515ed0aecdf9b11f966.jpg", "tag": "loafers"}, {"code": "S027", "name": "Velvet Slip-On Loafer", "desc": "Evening velvet loafer with contrast piping — sleek night-out piece.", "price": 50000, "image": "https://i.pinimg.com/1200x/e7/bf/d6/e7bfd64d23d1fa3dab7784a12635561e.jpg", "tag": "loafers"}, {"code": "S028", "name": "Monk Strap", "desc": "Single-buckle monk strap in polished leather — formal statement.", "price": 50000, "image": "https://i.pinimg.com/1200x/10/5c/e7/105ce7d4b20bb5131b7c89c4737f2b14.jpg", "tag": "loafers"}, {"code": "S029", "name": "Woven Leather Loafer", "desc": "Hand-woven leather upper loafer with flexible sole.", "price": 50000, "image": "https://i.pinimg.com/1200x/40/ba/c5/40bac5bbdefb7217a1f6d2a0fd6f0dd2.jpg", "tag": "loafers"}, {"code": "S030", "name": "Saddle Contrast Loafer", "desc": "Classic saddle loafer with dual-tone leather panels.", "price": 50000, "image": "https://i.pinimg.com/1200x/b8/36/df/b836df778f3aa2b40e4f7145e19a8d44.jpg", "tag": "loafers"}, {"code": "S031", "name": "Moc-Toe Soft Loafer", "desc": "Unstructured moc-toe loafer in soft leather for travel.", "price": 50000, "image": "https://i.pinimg.com/736x/e9/16/cc/e916ccbfacb40690496875599d90e96b.jpg", "tag": "loafers"}, {"code": "S032", "name": "Patent Formal Loafer", "desc": "High-shine patent leather loafer for black-tie events.", "price": 50000, "image": "https://i.pinimg.com/736x/60/93/2e/60932e26fd1b319b9b318cc4ef16c2f3.jpg", "tag": "loafers"}, {"code": "S033", "name": "Suede Tassel Brown", "desc": "Tobacco suede tassel loafer with leather lining.", "price": 50000, "image": "https://i.pinimg.com/1200x/29/c0/94/29c09470fa590e2041da52b39ae36809.jpg", "tag": "loafers"}, {"code": "S034", "name": "Penny Saddle Combo", "desc": "Hybrid penny-and-saddle design in navy leather.", "price": 50000, "image": "https://i.pinimg.com/1200x/c7/f4/53/c7f4532f1c3eeb27abe9bbe310373da2.jpg", "tag": "loafers"}, {"code": "S035", "name": "Minimal Slip Loafer", "desc": "Ultra-clean slip-on loafer with no hardware — pure lines.", "price": 50000, "image": "https://i.pinimg.com/1200x/67/aa/26/67aa26258ba44c9ed1d2f097cf07edf4.jpg", "tag": "loafers"}, {"code": "S036", "name": "Chelsea Leather Ankle", "desc": "Sleek black Chelsea boot with elastic side gores and pull tabs — minimal year-round.", "price": 50000, "image": "https://i.pinimg.com/1200x/b5/ba/75/b5ba75d0e693b57be108a3e707c7c790.jpg", "tag": "boots"}, {"code": "S037", "name": "Zip Chukka Boot", "desc": "Pointed-toe ankle boot with side zip and block heel in black or burgundy.", "price": 50000, "image": "https://i.pinimg.com/1200x/6a/f5/e1/6af5e161891912962fd75c96a08094de.jpg", "tag": "boots"}, {"code": "S038", "name": "Desert Suede Boot", "desc": "Classic two-eyelet desert boot in soft suede with crepe-style sole.", "price": 50000, "image": "https://i.pinimg.com/1200x/09/d4/cc/09d4cc31c8f0d7b2935984a5bf79009a.jpg", "tag": "boots"}, {"code": "S039", "name": "Cap-Toe Oxford Boot", "desc": "Formal cap-toe boot in polished leather with Goodyear-style welt look.", "price": 50000, "image": "https://i.pinimg.com/1200x/14/27/5f/14275f862e147a790e37ed12294438cb.jpg", "tag": "boots"}, {"code": "S040", "name": "Lace-Up Combat Boot", "desc": "Rugged lace-up combat silhouette with padded collar and durable sole.", "price": 50000, "image": "https://i.pinimg.com/736x/1b/fa/c3/1bfac366ac94405cbabe620f1d17c8cd.jpg", "tag": "boots"}, {"code": "S041", "name": "Suede Chukka Classic", "desc": "Three-eyelet chukka in soft suede with rubber sole.", "price": 50000, "image": "https://i.pinimg.com/1200x/bf/8a/67/bf8a671e9fa9466dbbe31a543d4a0c20.jpg", "tag": "boots"}, {"code": "S042", "name": "Chelsea Suede Grey", "desc": "Grey suede Chelsea with elastic panels and leather pull tab.", "price": 50000, "image": "https://i.pinimg.com/736x/0e/09/61/0e09613caf780d367b4dcb2470bf037a.jpg", "tag": "boots"}, {"code": "S043", "name": "Work Boot Leather", "desc": "Heavy leather work-boot style with lug sole and metal eyelets.", "price": 50000, "image": "https://i.pinimg.com/1200x/27/a2/11/27a211ab6be6bfd443d8475826b56dc5.jpg", "tag": "boots"}, {"code": "S044", "name": "Ankle Zip Dress Boot", "desc": "Slim dress boot with inner zip and stacked heel.", "price": 50000, "image": "https://i.pinimg.com/1200x/8c/2e/93/8c2e93150261efa930a34a4c00f280f8.jpg", "tag": "boots"}, {"code": "S045", "name": "Western-Inspired Boot", "desc": "Subtle western-inspired ankle boot with pointed toe and stitch detail.", "price": 50000, "image": "https://img.staticdj.com/94720bb093d58fafc59e504cb7369ca3.jpeg", "tag": "boots"}, {"code": "S046", "name": "Jordan Jumpman Slide", "desc": "Soft foam Jordan slides with Jumpman branding — everyday comfort with street DNA.", "price": 20000, "image": "https://i.pinimg.com/736x/c9/a4/f7/c9a4f730c1a7450cb7d79dba5313b78b.jpg", "tag": "slides"}, {"code": "S047", "name": "Adidas Cloud Foam Everyday Slide", "desc": "Ultra-soft one-band foam slide with contoured footbed — gym to house.", "price": 20000, "image": "https://i.pinimg.com/1200x/0e/29/62/0e296266363d6903a19e624fd2a3030f.jpg", "tag": "slides"}, {"code": "S048", "name": "H-Strap Luxury Slide", "desc": "Wide H-strap leather and suede slides in multiple finishes.", "price": 20000, "image": "https://i.pinimg.com/736x/f9/dd/47/f9dd4701a745fe03dbcb3981996ea9cd.jpg", "tag": "slides"}, {"code": "S049", "name": "Palm Strap Casual", "desc": "Open palm-style strap slide with cushioned sole — warm-day essential.", "price": 45000, "image": "https://i.pinimg.com/736x/30/6a/80/306a80683313f14bb6daae56908f654b.jpg", "tag": "slides"}, {"code": "S050", "name": "Floral Print Clog", "desc": "Molded clog with full floral print, classic strap and ventilation ports.", "price": 20000, "image": "https://i.pinimg.com/1200x/d2/06/f7/d206f75e1b8d314d2776abcd495c74c2.jpg", "tag": "slides"}, {"code": "S051", "name": "Abstract Print Slide", "desc": "Black slides with abstract print, bold footbed and chevron outsole.", "price": 20000, "image": "https://i.pinimg.com/736x/24/f8/27/24f827951316ed4a3dea55caf0dc486c.jpg", "tag": "slides"}, {"code": "S052", "name": "Minimal Pool Slide", "desc": "Clean one-band pool slide in solid colors with soft EVA.", "price": 20000, "image": "https://i.pinimg.com/1200x/87/ce/bf/87cebf0e0e53d1c748111498182cd2dc.jpg", "tag": "slides"}, {"code": "S053", "name": "Buckle Leather Slide", "desc": "Leather slide with adjustable buckle strap — elevated casual.", "price": 20000, "image": "https://i.pinimg.com/1200x/01/d5/4f/01d54f6e74f323a1397d6fd45fd525a1.jpg", "tag": "slides"}, {"code": "S054", "name": "Fur-Lined Winter Slide", "desc": "Plush fur-lined slide for cooler evenings.", "price": 20000, "image": "https://i.pinimg.com/736x/7a/d2/12/7ad21293c929521f882954f549eebead.jpg", "tag": "slides"}, {"code": "S055", "name": "Two-Strap Sport Slide", "desc": "Dual-strap sport slide with grip sole.", "price": 20000, "image": "https://i.pinimg.com/1200x/3d/be/6e/3dbe6e0bbc5239f2558ab8b7004fee02.jpg", "tag": "slides"}, {"code": "S056", "name": "Embroidered Logo Slide", "desc": "Soft slide with embroidered brand mark on the strap.", "price": 20000, "image": "https://i.pinimg.com/736x/6f/66/34/6f66344a83dc432c35d9926fb411b7a6.jpg", "tag": "slides"}, {"code": "S057", "name": "Crystal Strap Slide", "desc": "Statement slide with crystal-detail strap for nights out.", "price": 20000, "image": "https://i.pinimg.com/1200x/57/33/ee/5733eeeeadc2f404cac5b13f178c8e2d.jpg", "tag": "slides"}, {"code": "S058", "name": "Cross-Strap Soft Slide", "desc": "Cross-strap contoured slide for all-day ease.", "price": 20000, "image": "https://i.pinimg.com/736x/4c/b5/99/4cb599b696010577c7910dbe9d0a742e.jpg", "tag": "slides"}, {"code": "S059", "name": "Textured Rubber Slide", "desc": "Textured rubber upper slide with molded footbed.", "price": 20000, "image": "https://i.pinimg.com/1200x/6f/50/12/6f5012c6f045d9319b66815502a0576f.jpg", "tag": "slides"}, {"code": "S060", "name": "Premium Leather Palm", "desc": "Full leather palm/sandal with cushioned sole — refined open footwear.", "price": 45000, "image": "https://i.pinimg.com/736x/c2/fa/8a/c2fa8a4b7293c5f13423a755a335097a.jpg", "tag": "slides"}];
+
+    const byId = {};
+    CATALOG.forEach(item => {
+      byId[item.code] = {
+        id: item.code,
+        name: item.name,
+        brand: "Romeo's",
+        price: item.price,
+        image: item.image,
+        desc: item.desc,
+        badge: item.code,
+        tag: item.tag
+      };
+    });
+
+    let cart = JSON.parse(localStorage.getItem('romeoCart') || '[]');
+    let theme = document.documentElement.getAttribute('data-theme') || 'dark';
+    let activeTag = 'all';
+    let query = '';
+
+    const $ = (s, c = document) => c.querySelector(s);
+    const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+
+    function formatPrice(n) {
+      return '₦' + Number(n).toLocaleString('en-NG');
+    }
+
+    function fullImageUrl(url) {
+      if (!url) return url;
+      let u = String(url);
+      if (u.includes('i.pinimg.com')) u = u.replace(/\/(?:\d+x|originals)\//, '/736x/');
+      return u;
+    }
+    function cardImg(url) {
+      if (!url) return url;
+      let u = String(url);
+      if (u.includes('i.pinimg.com')) u = u.replace(/\/(?:\d+x|originals)\//, '/474x/');
+      return u;
+    }
+    function buildWhatsAppOrderMessage() {
+      if (cart.length === 0) return 'Hi- I would like to order from Romeo Kicks';
+      const lines = cart.map((item, i) => {
+        const qty = Number(item.qty) || 1;
+        const unit = Number(item.price) || 0;
+        const lineTotal = unit * qty;
+        const img = fullImageUrl(item.image || '');
+        return (i + 1) + '. ' + item.name + '\n' +
+          '   Qty: ' + qty + ' × ' + formatPrice(unit) + ' = ' + formatPrice(lineTotal) + '\n' +
+          (img ? '   Photo: ' + img + '\n' : '');
+      });
+      const total = cart.reduce((s, item) => s + (Number(item.price) || 0) * (Number(item.qty) || 1), 0);
+      return 'Hi- I would like to order from Romeo Kicks:\n\n' + lines.join('\n') +
+        '\n────────────────\nTOTAL: ' + formatPrice(total) + '\n\nPlease confirm availability. Thank you!';
+    }
+    function openWhatsAppOrder() {
+      window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(buildWhatsAppOrderMessage()), '_blank', 'noopener');
+    }
+
+
+    function showToast(msg) {
+      const t = $('#toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2500);
+    }
+
+    function saveCart() {
+      localStorage.setItem('romeoCart', JSON.stringify(cart));
+      updateCartUI();
+    }
+
+    function addToCart(id) {
+      const product = byId[id];
+      if (!product) return;
+      const existing = cart.find(item => item.id === id);
+      if (existing) existing.qty += 1;
+      else cart.push({
+        id: product.id,
+        name: product.name,
+        brand: product.brand,
+        price: product.price,
+        image: product.image,
+        section: 'shoes',
+        qty: 1
+      });
+      saveCart();
+      showToast(product.name + ' added to cart');
+      const cartBtn = $('#cart-btn');
+      if (cartBtn) {
+        cartBtn.style.transform = 'scale(1.15)';
+        setTimeout(() => cartBtn.style.transform = '', 200);
+      }
+    }
+
+    function removeFromCart(id) {
+      cart = cart.filter(item => item.id !== id);
+      saveCart();
+      showToast('Item removed');
+    }
+
+    function updateQty(id, delta) {
+      const item = cart.find(i => i.id === id);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) removeFromCart(id);
+      else saveCart();
+    }
+
+    function clearCart() {
+      cart = [];
+      saveCart();
+      showToast('Cart cleared');
+    }
+
+    function updateCartUI() {
+      const count = cart.reduce((s, i) => s + i.qty, 0);
+      const countEl = $('#cart-count');
+      if (countEl) {
+        countEl.textContent = count;
+        countEl.classList.toggle('show', count > 0);
+      }
+      const container = $('#cart-items');
+      if (!container) return;
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="cart-empty">
+            <i class="fas fa-shopping-bag"></i>
+            <p>Your cart is empty</p>
+            <p style="font-size:0.85rem;margin-top:0.5rem">Add some kicks or belts</p>
+          </div>`;
+      } else {
+        container.innerHTML = cart.map(item => `
+          <div class="cart-item" data-id="${item.id}">
+            <img class="cart-item-img" src="${typeof cardImg === 'function' ? cardImg(item.image) : item.image}" alt="${item.name}" onerror="this.src='logo.jfif'">
+            <div class="cart-item-info">
+              <div class="cart-item-name">${item.name}</div>
+              <div class="cart-item-meta">${item.brand || ''}</div>
+              <div class="cart-item-price">${formatPrice(item.price * item.qty)}</div>
+              <div class="cart-item-qty">
+                <button class="qty-btn" data-action="dec" data-id="${item.id}">−</button>
+                <span>${item.qty}</span>
+                <button class="qty-btn" data-action="inc" data-id="${item.id}">+</button>
+              </div>
+            </div>
+            <button class="cart-item-remove" data-action="remove" data-id="${item.id}" aria-label="Remove">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        `).join('');
+      }
+      const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+      const totalEl = $('#cart-total');
+      if (totalEl) totalEl.textContent = formatPrice(total);
+    }
+
+    function openCart() {
+      $('#cart-sidebar').classList.add('open');
+      $('#cart-overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeCart() {
+      $('#cart-sidebar').classList.remove('open');
+      $('#cart-overlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function openModal(id) {
+      const product = byId[id];
+      if (!product) return;
+      $('#modal-body').innerHTML = `
+        <img class="modal-img" src="${product.image}" alt="${product.name}" onerror="this.src='logo.jfif'">
+        <div class="modal-info">
+          <p class="modal-brand">${product.brand} · ${product.badge}</p>
+          <h3 class="modal-name">${product.name}</h3>
+          <p class="modal-desc">${product.desc}</p>
+          <div class="modal-price">${formatPrice(product.price)}</div>
+          <div class="modal-actions">
+            <button class="btn btn-primary" data-action="add" data-id="${product.id}">
+              <i class="fas fa-shopping-bag"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      `;
+      $('#modal-overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function filtered() {
+      return CATALOG.filter(item => {
+        const tagOk = activeTag === 'all' || item.tag === activeTag;
+        const q = query.trim().toLowerCase();
+        const qOk = !q ||
+          item.name.toLowerCase().includes(q) ||
+          item.code.toLowerCase().includes(q) ||
+          item.desc.toLowerCase().includes(q);
+        return tagOk && qOk;
+      });
+    }
+
+    let cardObserver = null;
+    function observeCards() {
+      if (cardObserver) cardObserver.disconnect();
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        $$('.cat-scroll-card').forEach(c => c.classList.add('is-shown'));
+        return;
+      }
+      cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-shown');
+            cardObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      $$('.cat-scroll-card').forEach(c => cardObserver.observe(c));
+      setTimeout(() => $$('.cat-scroll-card:not(.is-shown)').forEach(c => c.classList.add('is-shown', 'visible')), 1000);
+    }
+
+    function render() {
+      const list = filtered();
+      $('#cat-showing').textContent = list.length + ' of ' + CATALOG.length;
+      const grid = $('#cat-grid');
+      if (!list.length) {
+        grid.innerHTML = '<div class="cat-empty"><p>No styles match your search.</p></div>';
+        return;
+      }
+      grid.innerHTML = list.map((item, i) => `
+        <article class="product-card cat-scroll-card" style="transition-delay: ${Math.min(i % 8, 7) * 0.05}s" data-tag="${item.tag}">
+          <div class="product-img-wrap">
+            <span class="product-badge">${item.code}</span>
+            <img class="product-img" src="${typeof cardImg === 'function' ? cardImg(item.image) : item.image}" alt="${item.name}" width="600" height="600" loading="${i < 8 ? 'eager' : 'lazy'}" fetchpriority="${i < 4 ? 'high' : 'auto'}" referrerpolicy="no-referrer" decoding="async" onerror="this.onerror=null;this.src='logo.jfif'">
+            <button class="btn btn-primary btn-sm product-quick" data-action="quick" data-id="${item.code}">
+              Quick View
+            </button>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Romeo's · ${item.tag}</p>
+            <h3 class="product-name">${item.name}</h3>
+            <p class="product-desc">${item.desc}</p>
+            <div class="product-footer">
+              <div class="product-price">${formatPrice(item.price)}</div>
+              <button class="add-cart-btn" data-action="add" data-id="${item.code}" aria-label="Add to cart">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+      `).join('');
+      $$('.cat-scroll-card', grid).forEach((c, i) => { if (i < 12) c.classList.add('is-shown', 'visible'); });
+      observeCards();
+    }
+
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-action]');
+      if (!btn) return;
+      const action = btn.dataset.action;
+      const id = btn.dataset.id;
+      if (action === 'add') {
+        addToCart(id);
+        if (btn.classList.contains('add-cart-btn')) {
+          btn.classList.add('added');
+          btn.innerHTML = '<i class="fas fa-check"></i>';
+          setTimeout(() => {
+            btn.classList.remove('added');
+            btn.innerHTML = '<i class="fas fa-plus"></i>';
+          }, 1200);
+        }
+      }
+      if (action === 'quick') openModal(id);
+      if (action === 'inc') updateQty(id, 1);
+      if (action === 'dec') updateQty(id, -1);
+      if (action === 'remove') removeFromCart(id);
+    });
+
+    $('#cat-search').addEventListener('input', () => {
+      query = $('#cat-search').value;
+      render();
+    });
+
+    $('#cat-filters').addEventListener('click', e => {
+      const b = e.target.closest('.filter-btn');
+      if (!b) return;
+      $$('#cat-filters .filter-btn').forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+      activeTag = b.dataset.tag;
+      render();
+    });
+
+    (function () {
+      const overlay = $('#intro-overlay');
+      if (!overlay) return;
+      setTimeout(() => {
+        overlay.classList.add('hide');
+        setTimeout(() => overlay.remove(), 500);
+      }, 1500);
+    })();
+
+    const icon = $('#theme-icon');
+    if (icon) icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    $('#theme-toggle').addEventListener('click', () => {
+      const next = theme === 'dark' ? 'light' : 'dark';
+      const apply = () => {
+        theme = next;
+        document.documentElement.setAttribute('data-theme', theme);
+        try { localStorage.setItem('romeoTheme', theme); } catch (e) {}
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      };
+      if (document.startViewTransition) document.startViewTransition(apply);
+      else apply();
+    });
+
+    $('#cart-btn').addEventListener('click', openCart);
+    $('#cart-close').addEventListener('click', closeCart);
+    $('#cart-overlay').addEventListener('click', closeCart);
+    $('#clear-cart').addEventListener('click', clearCart);
+    $('#whatsapp-order-btn').addEventListener('click', () => { openWhatsAppOrder(); });
+
+    $('#modal-close').addEventListener('click', () => {
+      $('#modal-overlay').classList.remove('open');
+      document.body.style.overflow = '';
+    });
+    $('#modal-overlay').addEventListener('click', (e) => {
+      if (e.target === $('#modal-overlay')) {
+        $('#modal-overlay').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    const menuToggle = $('#menu-toggle');
+    const nav = $('#nav');
+    if (menuToggle && nav) {
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        nav.classList.toggle('open');
+      });
+    }
+
+    (function () {
+      const dropdown = document.querySelector('.nav-dropdown');
+      const dropToggle = document.querySelector('.nav-dropdown-toggle');
+      if (!dropdown || !dropToggle) return;
+      dropToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const open = dropdown.classList.toggle('open');
+        dropToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove('open');
+          dropToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+      dropdown.querySelectorAll('.nav-dropdown-item').forEach(item => {
+        item.addEventListener('click', () => {
+          dropdown.classList.remove('open');
+          dropToggle.setAttribute('aria-expanded', 'false');
+          if (menuToggle) menuToggle.classList.remove('active');
+          if (nav) nav.classList.remove('open');
+        });
+      });
+    })();
+
+    window.addEventListener('scroll', () => {
+      $('#header').classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    $('#floating-wa').addEventListener('click', e => { e.preventDefault(); openWhatsAppOrder(); });
+
+    updateCartUI();
+    render();
+  </script>
+</body>
+</html>
