@@ -2098,7 +2098,19 @@ button {
 
   .hero-highlights {
     flex-direction: column;
-    gap: 0.65rem;
+    align-items: flex-start;   /* same left edge for every line */
+    justify-content: center;
+    gap: 0.7rem;
+    width: max-content;        /* shrink to content */
+    max-width: 100%;
+    margin-left: auto;         /* center the whole block */
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .hero-highlights span {
+    justify-content: flex-start;
+    width: auto;
   }
 
   .floating-wa {
